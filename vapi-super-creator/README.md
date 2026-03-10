@@ -5,7 +5,7 @@ Complete voice AI development toolkit for Claude Code and [Vapi](https://vapi.ai
 ## Installation
 
 ```bash
-claude plugin marketplace add github:pokharnajay/claude-superkit
+claude plugin marketplace add pokharnajay/claude-superkit
 claude plugin install vapi-super-creator@claude-superkit
 ```
 

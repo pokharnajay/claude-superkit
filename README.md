@@ -14,7 +14,7 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 **Step 1:** Register the marketplace (one-time):
 
 ```bash
-claude plugin marketplace add github:pokharnajay/claude-superkit
+claude plugin marketplace add pokharnajay/claude-superkit
 ```
 
 **Step 2:** Install the plugins you want:

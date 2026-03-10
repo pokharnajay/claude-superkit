@@ -1,66 +1,79 @@
 # Vapi Super Creator
 
-Complete voice AI development toolkit for [Vapi](https://vapi.ai). Build, configure, test, and manage voice assistants, tools, squads, workflows, phone numbers, webhooks, and more.
+Complete voice AI development toolkit for Claude Code and [Vapi](https://vapi.ai) — 18 skills, 5 agents, 7 commands to build, configure, test, and manage voice assistants.
 
-## Structure
+## Installation
 
+```bash
+claude install-marketplace github:pokharnajay/claude-superkit
+claude install-plugin vapi-super-creator
 ```
-vapi-super-creator/
-├── .claude-plugin/          # Plugin metadata
-│   └── plugin.json
-├── hooks/                   # Session lifecycle hooks
-│   ├── hooks.json           # SessionStart hook config
-│   └── session-start        # Auto-injects Vapi context + API key check
-├── commands/                # CLI shortcuts (7 commands)
-│   ├── create-assistant.md
-│   ├── create-tool.md
-│   ├── create-squad.md
-│   ├── create-call.md
-│   ├── create-workflow.md
-│   ├── setup-webhook.md
-│   └── verify-setup.md
-├── agents/                  # Specialized sub-agents (5 agents)
-│   ├── vapi-creator.md          # Main orchestrator + verifier
-│   ├── vapi-assistant-builder.md # Full assistant lifecycle
-│   ├── vapi-tool-builder.md     # Tool creation + server setup
-│   ├── vapi-call-manager.md     # Calls, campaigns, analytics
-│   └── vapi-infrastructure.md   # API keys, webhooks, phone numbers
-├── skills/                  # Core skills library (18 skills)
-│   ├── create-assistant/    # Voice assistant creation (+ 5 reference files)
-│   ├── create-tool/         # Custom tools & integrations (+ 10 reference files)
-│   ├── create-call/         # Outbound & batch calls
-│   ├── create-squad/        # Multi-assistant handoffs (+ 4 reference files)
-│   ├── create-phone-number/ # Phone number provisioning
-│   ├── create-workflow/     # Visual conversation flows
-│   ├── setup-api-key/       # API key & environment setup
-│   ├── setup-webhook/       # Server URLs & event handling
-│   ├── manage-analytics/    # Call & subscription analytics
-│   ├── manage-campaigns/    # Outbound calling campaigns
-│   ├── manage-chats/        # Text-based chat conversations
-│   ├── manage-evals/        # Assistant performance testing
-│   ├── manage-files/        # Knowledge base file management
-│   ├── manage-insights/     # Reporting & dashboards
-│   ├── manage-provider-resources/ # Voice pronunciation, etc.
-│   ├── manage-scorecards/   # Call quality scoring
-│   ├── manage-sessions/     # Persistent conversation sessions
-│   └── manage-structured-outputs/ # Post-call data extraction
-├── docs/                    # Documentation
-│   └── IMPROVEMENTS.md      # Prioritized improvement roadmap
-└── README.md                # This file
-```
+
+## Skills (18)
+
+| Skill | Description |
+|-------|-------------|
+| `setup-api-key` | Obtain and configure Vapi API key |
+| `create-assistant` | Create voice AI assistants with models, voices, transcribers, tools, and hooks |
+| `create-tool` | Build function tools, API request tools, transfer/end call tools, and integrations |
+| `create-call` | Create outbound phone calls, web calls, and batch calls |
+| `create-squad` | Multi-assistant squads with handoffs between specialized agents |
+| `create-workflow` | Visual conversation workflows with branching and tool nodes |
+| `create-phone-number` | Provision and manage phone numbers (Twilio, Vonage, Telnyx, Vapi) |
+| `setup-webhook` | Configure server URLs and webhooks for real-time call events |
+| `manage-analytics` | Query call and subscription analytics — costs, duration, concurrency |
+| `manage-campaigns` | Outbound calling campaigns at scale |
+| `manage-chats` | Text-based chat conversations using assistants, squads, or workflows |
+| `manage-evals` | Test assistant performance with mock conversations and scoring |
+| `manage-files` | Upload and manage knowledge base files |
+| `manage-insights` | Reporting dashboards with charts, metrics, and formulas |
+| `manage-provider-resources` | Pronunciation dictionaries for Cartesia and ElevenLabs |
+| `manage-scorecards` | Observability scorecards for call quality scoring |
+| `manage-sessions` | Persistent conversation sessions across multiple calls or chats |
+| `manage-structured-outputs` | Extract structured data from conversations using AI or regex |
+
+## Agents (5)
+
+| Agent | Description |
+|-------|-------------|
+| `vapi-creator` | **Main orchestrator** — verifies configurations and routes to sub-agents |
+| `vapi-assistant-builder` | Full assistant lifecycle — build from scratch or modify existing |
+| `vapi-tool-builder` | Tool creation, tool servers, and external API integrations |
+| `vapi-call-manager` | Outbound calls, campaigns, testing, and call analytics |
+| `vapi-infrastructure` | API keys, phone numbers, webhooks, file uploads, provider configs |
+
+## Commands (7)
+
+| Command | Description |
+|---------|-------------|
+| `/create-assistant` | Create a Vapi voice AI assistant with model, voice, and tools |
+| `/create-tool` | Create custom tools (function, API, transfer, end call, integrations) |
+| `/create-call` | Create outbound phone calls, web calls, and batch calls |
+| `/create-squad` | Create multi-assistant squads with handoffs |
+| `/create-workflow` | Build visual conversation workflows with branching |
+| `/setup-webhook` | Configure server URLs and webhooks for call events |
+| `/verify-setup` | Verify all Vapi resources are correctly configured |
+
+## Hooks
+
+| Hook | Event | Description |
+|------|-------|-------------|
+| `session-start` | `startup`, `resume`, `clear`, `compact` | Auto-injects Vapi context and checks API key |
 
 ## Quick Start
 
-1. Ensure your Vapi API key is configured (use `setup-api-key` skill)
+1. Set up your API key: use the `setup-api-key` skill
 2. Create an assistant: `/create-assistant`
 3. Add tools: `/create-tool`
-4. Test with a call: `/create-call`
-5. Verify everything: `/verify-setup`
+4. Set up webhooks: `/setup-webhook`
+5. Provision a phone number: use the `create-phone-number` skill
+6. Test with a call: `/create-call`
+7. Verify everything: `/verify-setup`
 
 ## Workflow
 
 ```
-setup-api-key → create-assistant → create-tool → setup-webhook → create-phone-number → create-call
+setup-api-key → create-assistant → create-tool → setup-webhook → create-phone-number → create-call → verify-setup
 ```
 
 ## Design Principles
@@ -70,6 +83,7 @@ setup-api-key → create-assistant → create-tool → setup-webhook → create-
 - **Verification** — Never declare done without a clean verification pass
 - **Progressive Disclosure** — SKILL.md overview + references/ for deep details
 
-## Version
+## Requirements
 
-1.0.0
+- Vapi API key (get one at [vapi.ai](https://vapi.ai))
+- Phone number provider account (Twilio/Vonage/Telnyx) for inbound calls

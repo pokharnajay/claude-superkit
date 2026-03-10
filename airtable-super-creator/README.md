@@ -5,7 +5,8 @@ Complete Airtable development toolkit for Claude Code — 16 skills, 8 agents, 1
 ## Installation
 
 ```bash
-claude install-plugin github:pokharnajay/claude-superkit/airtable-super-creator
+claude install-marketplace github:pokharnajay/claude-superkit
+claude install-plugin airtable-super-creator
 ```
 
 ## Skills (16)
@@ -33,7 +34,7 @@ claude install-plugin github:pokharnajay/claude-superkit/airtable-super-creator
 
 | Agent | Description |
 |-------|-------------|
-| `airtable-creator` | **Main orchestrator** — routes to sub-agents, verify loop |
+| `airtable-creator` | **Main orchestrator** — routes to sub-agents, runs verify loop |
 | `airtable-base-architect` | Schema design, base creation, data modeling |
 | `airtable-record-ops` | Bulk imports, migrations, batch CRUD, deduplication |
 | `airtable-field-manager` | Field types, formula writing, rollups, lookups |
@@ -46,24 +47,30 @@ claude install-plugin github:pokharnajay/claude-superkit/airtable-super-creator
 
 | Command | Description |
 |---------|-------------|
-| `/create-base` | Create a new Airtable base |
-| `/manage-records` | CRUD operations on records |
-| `/manage-tables` | Create/update tables |
-| `/manage-fields` | Create/update fields |
-| `/setup-webhook` | Configure webhooks |
-| `/design-schema` | Design optimal schema |
-| `/import-data` | Bulk import from CSV/JSON |
-| `/manage-workspaces` | Workspace operations |
-| `/manage-collaborators` | Access management |
-| `/check-token` | Verify token and scopes |
+| `/create-base` | Create a new Airtable base with tables, fields, and initial schema |
+| `/manage-records` | Create, read, update, or delete records |
+| `/manage-tables` | Create, list, or update tables |
+| `/manage-fields` | Create, list, or update fields |
+| `/setup-webhook` | Create and manage webhooks for real-time notifications |
+| `/design-schema` | Design an optimal database schema from requirements |
+| `/import-data` | Bulk import from CSV, JSON, or external sources |
+| `/manage-workspaces` | Create, manage, and organize workspaces |
+| `/manage-collaborators` | Add, update, or remove collaborators |
+| `/check-token` | Verify token validity, user info, and scopes |
+
+## Hooks
+
+| Hook | Event | Description |
+|------|-------|-------------|
+| `session-start` | `startup`, `resume`, `clear`, `compact` | Auto-injects Airtable context and checks API key |
 
 ## Quick Start
 
-1. Set up your token: `/check-token` or `airtable-super-creator:setup-api-key`
+1. Set up your token: `/check-token`
 2. Create a base: `/create-base`
 3. Add tables and fields: `/manage-tables` → `/manage-fields`
 4. Import data: `/import-data`
-5. Create views: `airtable-super-creator:views`
+5. Create views: use the `views` skill
 6. Set up webhooks: `/setup-webhook`
 
 ## API Coverage
@@ -87,5 +94,5 @@ claude install-plugin github:pokharnajay/claude-superkit/airtable-super-creator
 ## Requirements
 
 - Airtable personal access token (starts with `pat`)
-- Required scopes depend on operation (see setup-api-key skill)
+- Required scopes depend on operation (see `setup-api-key` skill)
 - Enterprise endpoints require Enterprise Scale plan

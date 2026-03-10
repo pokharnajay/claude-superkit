@@ -14,14 +14,14 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 **Step 1:** Register the marketplace (one-time):
 
 ```bash
-claude install-marketplace github:pokharnajay/claude-superkit
+claude plugin marketplace add github:pokharnajay/claude-superkit
 ```
 
 **Step 2:** Install the plugins you want:
 
 ```bash
-claude install-plugin airtable-super-creator
-claude install-plugin vapi-super-creator
+claude plugin install airtable-super-creator@claude-superkit
+claude plugin install vapi-super-creator@claude-superkit
 ```
 
 ## Repository Structure
@@ -42,6 +42,8 @@ claude-superkit/
 │   ├── commands/             # 7 commands
 │   ├── hooks/
 │   └── docs/
+├── .claude-plugin/
+│   └── marketplace.json     # Marketplace manifest
 ├── LICENSE
 └── README.md
 ```

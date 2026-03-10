@@ -1,0 +1,24 @@
+{
+  "name": "claude-superkit",
+  "owner": {
+    "name": "Jay Pokharna"
+  },
+  "metadata": {
+    "description": "Claude Code plugin bundles — skill packs that extend Claude with domain-specific superpowers",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "airtable-super-creator",
+      "description": "Complete Airtable development toolkit — 16 skills, 8 agents, 10 commands covering every Airtable Web API endpoint",
+      "source": "./airtable-super-creator",
+      "strict": false
+    },
+    {
+      "name": "vapi-super-creator",
+      "description": "Complete voice AI toolkit for Vapi — 18 skills, 5 agents, 7 commands to build and manage voice assistants",
+      "source": "./vapi-super-creator",
+      "strict": false
+    }
+  ]
+}

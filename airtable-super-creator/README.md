@@ -5,8 +5,8 @@ Complete Airtable development toolkit for Claude Code — 16 skills, 8 agents, 1
 ## Installation
 
 ```bash
-claude install-marketplace github:pokharnajay/claude-superkit
-claude install-plugin airtable-super-creator
+claude plugin marketplace add github:pokharnajay/claude-superkit
+claude plugin install airtable-super-creator@claude-superkit
 ```
 
 ## Skills (16)

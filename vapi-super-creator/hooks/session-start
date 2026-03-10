@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# SessionStart hook for vapi-voice-ai plugin
+# Injects Vapi skill awareness into every conversation
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
+PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+# Check for API key
+api_key_warning=""
+if [ -z "${VAPI_API_KEY:-}" ] && [ -z "${VAPI_PRIVATE_API_KEY:-}" ]; then
+    api_key_warning="\\n\\n⚠️ **WARNING:** No Vapi API key detected. Run the setup-api-key skill first."
+fi
+
+# Escape string for JSON embedding
+escape_for_json() {
+    local s="$1"
+    s="${s//\\/\\\\}"
+    s="${s//\"/\\\"}"
+    s="${s//$'\n'/\\n}"
+    s="${s//$'\r'/\\r}"
+    s="${s//$'\t'/\\t}"
+    printf '%s' "$s"
+}
+
+api_warning_escaped=$(escape_for_json "$api_key_warning")
+
+session_context="<VAPI_CONTEXT>\nYou have Vapi voice AI skills available.\n\n**Available Vapi skills** (invoke via Skill tool with 'vapi-voice-ai:' prefix):\n\n| Skill | Purpose |\n|-------|--------|\n| setup-api-key | Configure Vapi API keys and environment |\n| create-assistant | Build voice assistants with models, voices, transcribers |\n| create-tool | Add tools to assistants (function, API, transfer, end call) |\n| create-call | Make outbound calls, web calls, batch calls |\n| create-squad | Multi-assistant workflows with handoffs |\n| create-phone-number | Provision and manage phone numbers |\n| setup-webhook | Configure server URLs and event handlers |\n| create-workflow | Build visual conversation workflows |\n| manage-analytics | Query call and subscription analytics |\n| manage-campaigns | Outbound calling campaigns at scale |\n| manage-chats | Text-based chat conversations |\n| manage-evals | Test assistant performance |\n| manage-files | Upload and manage knowledge base files |\n| manage-insights | Reporting insights and dashboards |\n| manage-scorecards | Call quality scoring |\n| manage-sessions | Persistent conversation sessions |\n| manage-structured-outputs | Extract structured data from calls |\n| manage-provider-resources | Provider configs (pronunciation, etc.) |\n\n**Workflow:** setup-api-key → create-assistant → create-tool → setup-webhook → create-phone-number → create-call\n\n**Verification:** After creating any resource, use the vapi-creator agent to verify configuration.\n\n**REQUIRED:** Always invoke the relevant skill via the Skill tool. Never guess Vapi API payloads from memory.${api_warning_escaped}\n</VAPI_CONTEXT>"
+
+cat <<EOF
+{
+  "additional_context": "${session_context}",
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "${session_context}"
+  }
+}
+EOF
+
+exit 0

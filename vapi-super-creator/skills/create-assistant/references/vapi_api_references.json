@@ -1,0 +1,139 @@
+{
+
+"vapi_api_references" : [
+    {
+      "url": "https://docs.vapi.ai/api-reference/assistants/create",
+      "status": 200,
+      "title": "Create Assistant | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "assistants",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/assistants/create",
+      "ogImage": "",
+      "path": "/api-reference/assistants/create"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/assistants/delete",
+      "status": 200,
+      "title": "Delete Assistant | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "assistants",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/assistants/delete",
+      "ogImage": "",
+      "path": "/api-reference/assistants/delete"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/assistants/get",
+      "status": 200,
+      "title": "Get Assistant | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "assistants",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/assistants/get",
+      "ogImage": "",
+      "path": "/api-reference/assistants/get"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/assistants/list",
+      "status": 200,
+      "title": "List Assistants | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "assistants",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/assistants/list",
+      "ogImage": "",
+      "path": "/api-reference/assistants/list"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/assistants/update",
+      "status": 200,
+      "title": "Update Assistant | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "assistants",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/assistants/update",
+      "ogImage": "",
+      "path": "/api-reference/assistants/update"
+    },
+
+    {
+      "url": "https://docs.vapi.ai/api-reference/tools/create",
+      "status": 200,
+      "title": "Create Tool | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/create",
+      "ogImage": "",
+      "path": "/api-reference/tools/create"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/tools/delete",
+      "status": 200,
+      "title": "Delete Tool | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/delete",
+      "ogImage": "",
+      "path": "/api-reference/tools/delete"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/tools/get",
+      "status": 200,
+      "title": "Get Tool | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/get",
+      "ogImage": "",
+      "path": "/api-reference/tools/get"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/tools/list",
+      "status": 200,
+      "title": "List Tools | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/list",
+      "ogImage": "",
+      "path": "/api-reference/tools/list"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/tools/tool-controller-test-code-execution",
+      "status": 200,
+      "title": "Test Code Tool Execution | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/tool-controller-test-code-execution",
+      "ogImage": "",
+      "path": "/api-reference/tools/tool-controller-test-code-execution"
+    },
+{
+      "url": "https://docs.vapi.ai/api-reference/tools/update",
+      "status": 200,
+      "title": "Update Tool | Vapi",
+      "description": "",
+      "category": "api-reference",
+      "subcategory": "tools",
+      "keywords": "",
+      "canonical": "https://docs.vapi.ai/api-reference/tools/update",
+      "ogImage": "",
+      "path": "/api-reference/tools/update"
+    }
+]
+
+}

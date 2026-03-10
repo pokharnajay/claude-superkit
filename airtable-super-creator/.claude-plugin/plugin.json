@@ -1,0 +1,21 @@
+{
+  "name": "airtable-super-creator",
+  "description": "Complete Airtable development toolkit with 16 skills, 8 agents, and 10 commands: manage bases, tables, fields, records, views, webhooks, workspaces, interfaces, attachments, collaborators, automations, sync, and enterprise features via the Airtable Web API",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jay Pokharna"
+  },
+  "license": "MIT",
+  "keywords": [
+    "airtable",
+    "databases",
+    "records",
+    "tables",
+    "fields",
+    "views",
+    "webhooks",
+    "automations",
+    "collaborators",
+    "enterprise"
+  ]
+}

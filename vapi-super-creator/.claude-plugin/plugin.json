@@ -1,0 +1,21 @@
+{
+  "name": "vapi-super-creator",
+  "description": "Complete voice AI development toolkit for Vapi: create assistants, tools, squads, workflows, phone numbers, webhooks, and manage analytics, campaigns, evaluations, and more",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jay Pokharna"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vapi",
+    "voice-ai",
+    "assistants",
+    "phone-calls",
+    "webhooks",
+    "squads",
+    "workflows",
+    "tools",
+    "campaigns",
+    "analytics"
+  ]
+}

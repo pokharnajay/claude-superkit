@@ -1,0 +1,6 @@
+---
+description: "Create multi-assistant squads in Vapi with handoffs between specialized voice agents"
+disable-model-invocation: true
+---
+
+Invoke the vapi-voice-ai:create-squad skill and follow it exactly as presented to you

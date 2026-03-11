@@ -20,9 +20,26 @@ claude plugin marketplace add pokharnajay/claude-superkit
 **Step 2:** Install the plugins you want:
 
 ```bash
+# Install for all projects (user scope — default)
 claude plugin install airtable-super-creator@claude-superkit
 claude plugin install vapi-super-creator@claude-superkit
+
+# Install for the current project only (shared via git)
+claude plugin install airtable-super-creator@claude-superkit --scope project
+claude plugin install vapi-super-creator@claude-superkit --scope project
+
+# Install locally (not shared with team)
+claude plugin install airtable-super-creator@claude-superkit --scope local
+claude plugin install vapi-super-creator@claude-superkit --scope local
 ```
+
+### Installation Scopes
+
+| Scope | Stored in | Shared via git? | Use case |
+|-------|-----------|-----------------|----------|
+| `user` (default) | `~/.claude/plugins/` | No | Personal — available in all your projects |
+| `project` | `.claude/plugins/` in project root | Yes | Team — everyone who clones the repo gets it |
+| `local` | `.claude/plugins/` (gitignored) | No | Personal per-project — only you, only this project |
 
 ## CLI Reference
 
@@ -48,11 +65,13 @@ claude plugin marketplace remove claude-superkit
 ### Plugin Management
 
 ```bash
-# Install a plugin from a marketplace
+# Install a plugin (default: user scope)
 claude plugin install plugin-name@marketplace-name
 
-# Install with a specific scope (user, project, or local)
-claude plugin install plugin-name@marketplace-name --scope project
+# Install with a specific scope
+claude plugin install plugin-name@marketplace-name --scope user      # all projects (default)
+claude plugin install plugin-name@marketplace-name --scope project   # current project, shared via git
+claude plugin install plugin-name@marketplace-name --scope local     # current project, not shared
 
 # List all installed plugins
 claude plugin list
@@ -70,11 +89,17 @@ claude plugin uninstall plugin-name@marketplace-name
 # Temporarily disable a plugin (without uninstalling)
 claude plugin disable plugin-name@marketplace-name
 
+# Disable with a specific scope
+claude plugin disable plugin-name@marketplace-name --scope project
+
 # Disable all plugins at once
 claude plugin disable --all
 
 # Re-enable a disabled plugin
 claude plugin enable plugin-name@marketplace-name
+
+# Re-enable with a specific scope
+claude plugin enable plugin-name@marketplace-name --scope project
 ```
 
 ### Validate
@@ -87,7 +112,7 @@ claude plugin validate ./path-to-plugin-or-marketplace
 ### Load Plugins for a Single Session
 
 ```bash
-# Use a local plugin directory without installing
+# Use a local plugin directory without installing (great for development/testing)
 claude --plugin-dir ./path-to-plugin
 ```
 

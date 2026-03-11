@@ -1,7 +1,7 @@
 {
   "name": "canvas-design",
-  "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. Museum-quality posters, covers, and visual compositions with 80+ bundled fonts.",
-  "version": "1.0.0",
+  "description": "Museum-quality visual art generation — covers, posters, social media posts in 20+ formats with 80+ fonts, procedural noise/textures, advanced blending, curated palettes, and composition frameworks.",
+  "version": "2.0.0",
   "author": {
     "name": "Jay Pokharna"
   },

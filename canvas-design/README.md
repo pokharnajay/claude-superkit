@@ -1,6 +1,6 @@
 # Canvas Design
 
-Create beautiful visual art in `.png` and `.pdf` documents using design philosophy. Museum-quality posters, covers, and visual compositions with 80+ bundled fonts.
+Museum-quality visual art generation — covers, posters, social media posts in 20+ formats with 80+ fonts, procedural noise/textures, advanced blending, curated palettes, and composition frameworks.
 
 ## Installation
 
@@ -14,63 +14,67 @@ claude plugin install canvas-design@claude-superkit
 
 ## What It Does
 
-This skill generates production-grade visual art through a two-step process:
+Generates production-grade visual art through a structured 4-phase process:
 
-1. **Design Philosophy Creation** — generates an aesthetic manifesto (art movement) as a `.md` file
-2. **Canvas Expression** — interprets the philosophy into a visual masterpiece as `.png` or `.pdf`
+1. **Design Specification** — select format, palette, typography, composition, and mood
+2. **Design Philosophy** — generate an aesthetic manifesto as a `.md` file
+3. **Canvas Creation** — express the philosophy as a `.png` or `.pdf` using Python/Pillow + core modules
+4. **Self-Audit** — run quality gates to prevent generic AI-looking output
 
-The output is 90% visual design, 10% essential text — true art objects, not decorated documents.
+## Supported Formats (20+)
 
-## Skills
+| Category | Formats |
+|----------|---------|
+| **Covers** | GitHub (1280x640), Notion (1500x600), LinkedIn Personal (1584x396), LinkedIn Company (1128x191), YouTube Banner (2560x1440), Twitter/X Header (1500x500) |
+| **Social Media** | Instagram Square (1080x1080), Instagram Story (1080x1920), LinkedIn Post (1200x627), Twitter/X Post (1600x900), Facebook Post (1200x630), Pinterest Pin (1000x1500) |
+| **Posters** | A3 (3508x4961), A4 (2480x3508), US Letter (2550x3300), Movie Poster (2700x4000), Event Poster (3300x5100) |
+| **Thumbnails** | YouTube (1280x720), Open Graph (1200x630) |
 
-| Skill | Purpose |
-|-------|---------|
-| `canvas-design` | Full design pipeline: philosophy creation → visual canvas generation |
+## Core Modules
 
-### Capabilities
+8 Python helper modules (PIL + numpy only, zero extra dependencies):
 
-- **Poster design** — event posters, promotional art, album covers
-- **Cover images** — social media banners, Notion covers, GitHub headers
-- **Abstract art** — generative compositions, pattern-based designs
-- **Brand visuals** — branded assets with custom typography
-- **Multi-page PDFs** — coffee-table-book-style visual storytelling
+| Module | Purpose |
+|--------|---------|
+| `noise.py` | Perlin noise, fractal noise, turbulence, flow fields |
+| `gradients.py` | Linear, radial, conic, multi-stop, noise-distorted gradients |
+| `textures.py` | Film grain, paper, halftone, scanlines, stipple, crosshatch |
+| `color_engine.py` | Color conversion, harmony, WCAG contrast checking |
+| `blending.py` | 8 Photoshop-style blend modes (multiply, screen, overlay, etc.) |
+| `composition.py` | Rule of thirds, golden ratio, Fibonacci spiral, grids, safe zones |
+| `geometry.py` | Bezier curves, wave lines, polygons, stars, concentric circles |
+| `effects.py` | Drop shadows, glows, vignettes, duotone, posterize |
+
+## Reference System
+
+5 curated reference documents:
+
+| Reference | Contents |
+|-----------|----------|
+| `formats.md` | 20+ format presets with dimensions, safe zones, typography scales |
+| `color-palettes.md` | 20 curated palettes (Warm, Cool, Earthy, Bold, Refined) |
+| `typography-pairings.md` | 15 validated font pairings from the bundled collection |
+| `composition-guide.md` | 8 composition techniques with Python coordinate formulas |
+| `anti-slop-checklist.md` | Forbidden patterns, mandatory self-audit, refinement protocol |
 
 ## Bundled Fonts (80+)
 
-Includes a curated collection of production-ready fonts:
-
 | Category | Fonts |
 |----------|-------|
-| **Sans-serif** | Outfit, Work Sans, Instrument Sans, Bricolage Grotesque, Smooch Sans |
-| **Serif** | Lora, Crimson Pro, Young Serif, Instrument Serif, IBM Plex Serif, Libre Baskerville, Italiana, Gloock |
-| **Monospace** | JetBrains Mono, IBM Plex Mono, DM Mono, Red Hat Mono, Geist Mono |
-| **Display** | Boldonse, Erica One, Big Shoulders, Poiret One, National Park |
-| **Specialty** | Silkscreen, Pixelify Sans, Nothing You Could Do, Arsenal SC |
-| **Technical** | Jura, Tektur |
-
-## Design Philosophies
-
-The skill generates unique aesthetic movements for each project. Examples:
-
-- **"Concrete Poetry"** — monumental form, bold geometry, Brutalist spatial divisions
-- **"Chromatic Language"** — color as the primary information system, Josef Albers meets data viz
-- **"Analog Meditation"** — texture, breathing room, Japanese photobook aesthetic
-- **"Geometric Silence"** — pure order, Swiss formalism, dramatic negative space
-- **"Neural Circuitry"** — dark substrates, luminous nodes, systematic intelligence
+| **Sans-serif** | Outfit, Work Sans, Instrument Sans, Bricolage Grotesque, Big Shoulders, Jura, National Park, Smooch Sans |
+| **Serif** | Lora, Crimson Pro, Instrument Serif, IBM Plex Serif, Libre Baskerville, Italiana, Young Serif, Gloock |
+| **Monospace** | JetBrains Mono, IBM Plex Mono, Geist Mono, DM Mono, Red Hat Mono |
+| **Display** | Boldonse, Erica One, Silkscreen, Pixelify Sans, Poiret One, Tektur, Arsenal SC, Nothing You Could Do |
 
 ## Usage Examples
 
 ```
-> Create a poster for a tech conference
-> Design a cover image for my GitHub repo (1500x600)
-> Make abstract art inspired by jazz music
-> Create a branded visual for my startup launch
+> Create a cover image for my GitHub repo
+> Design an Instagram post for a product launch
+> Make a movie poster for a sci-fi film
+> Create a YouTube thumbnail for a coding tutorial
+> Design an event poster for a tech conference
 ```
-
-## Output
-
-- `.md` — Design philosophy document
-- `.png` or `.pdf` — Final visual artwork
 
 ## License
 

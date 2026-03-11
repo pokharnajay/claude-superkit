@@ -8,6 +8,7 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 |--------|-------------|--------|--------|----------|
 | [airtable-super-creator](airtable-super-creator/) | Complete Airtable development toolkit — manage bases, tables, fields, records, views, webhooks, and more via the Airtable Web API | 16 | 8 | 10 |
 | [vapi-super-creator](vapi-super-creator/) | Complete voice AI toolkit for Vapi — build assistants, tools, squads, workflows, phone numbers, and webhooks | 18 | 5 | 7 |
+| [canvas-design](canvas-design/) | Create museum-quality visual art — posters, covers, compositions with 80+ bundled fonts | 1 | — | — |
 
 ## Installation
 
@@ -23,14 +24,17 @@ claude plugin marketplace add pokharnajay/claude-superkit
 # Install for all projects (user scope — default)
 claude plugin install airtable-super-creator@claude-superkit
 claude plugin install vapi-super-creator@claude-superkit
+claude plugin install canvas-design@claude-superkit
 
 # Install for the current project only (shared via git)
 claude plugin install airtable-super-creator@claude-superkit --scope project
 claude plugin install vapi-super-creator@claude-superkit --scope project
+claude plugin install canvas-design@claude-superkit --scope project
 
 # Install locally (not shared with team)
 claude plugin install airtable-super-creator@claude-superkit --scope local
 claude plugin install vapi-super-creator@claude-superkit --scope local
+claude plugin install canvas-design@claude-superkit --scope local
 ```
 
 ### Installation Scopes
@@ -134,11 +138,22 @@ claude-superkit/
 │   ├── commands/             # 7 commands
 │   ├── hooks/
 │   └── docs/
+├── canvas-design/            # Visual art & design plugin
+│   ├── .claude-plugin/
+│   ├── skills/               # 1 skill + 80+ fonts
+│   └── docs/
 ├── .claude-plugin/
 │   └── marketplace.json     # Marketplace manifest
 ├── LICENSE
 └── README.md
 ```
+
+## Links
+
+- **GitHub:** [pokharnajay/claude-superkit](https://github.com/pokharnajay/claude-superkit)
+- **Notion:** [Claude Skills - SuperKit](https://www.notion.so/Claude-Skills-SuperKit-32011c9d2b3981129409d244cf2e5475)
+
+<!-- Notion Page ID: 32011c9d-2b39-8112-9409-d244cf2e5475 -->
 
 ## License
 

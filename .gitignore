@@ -3,7 +3,11 @@
 
 # Claude Code
 .claude/
+.mcp.json
 
 # Non-bundle folders
 assistants/
 docs/
+claude-skills-other/
+storage/
+cover-assets/

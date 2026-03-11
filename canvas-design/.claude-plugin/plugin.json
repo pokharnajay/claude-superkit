@@ -1,0 +1,21 @@
+{
+  "name": "canvas-design",
+  "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. Museum-quality posters, covers, and visual compositions with 80+ bundled fonts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jay Pokharna"
+  },
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "art",
+    "canvas",
+    "poster",
+    "cover",
+    "png",
+    "pdf",
+    "typography",
+    "visual",
+    "illustration"
+  ]
+}

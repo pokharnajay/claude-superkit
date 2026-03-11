@@ -19,6 +19,12 @@
       "description": "Complete voice AI toolkit for Vapi — 18 skills, 5 agents, 7 commands to build and manage voice assistants",
       "source": "./vapi-super-creator",
       "strict": false
+    },
+    {
+      "name": "canvas-design",
+      "description": "Create museum-quality visual art — posters, covers, and compositions with 80+ bundled fonts and design philosophy pipeline",
+      "source": "./canvas-design",
+      "strict": false
     }
   ]
 }

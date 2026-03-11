@@ -1,5 +1,7 @@
 # Claude Superkit
 
+![Claude SuperKit Cover](assets/cover.png)
+
 A marketplace of Claude Code plugin bundles — installable skill packs that extend Claude Code with domain-specific superpowers.
 
 ## Bundles

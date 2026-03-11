@@ -22,7 +22,7 @@
     },
     {
       "name": "canvas-design",
-      "description": "Create museum-quality visual art — posters, covers, and compositions with 80+ bundled fonts and design philosophy pipeline",
+      "description": "Production-grade visual design with HTML/CSS + Playwright — 8 skills, 5 agents, 8 commands for covers, posters, social media, thumbnails, brand assets, and abstract art",
       "source": "./canvas-design",
       "strict": false
     }

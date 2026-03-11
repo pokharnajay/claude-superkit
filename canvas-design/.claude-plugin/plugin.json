@@ -1,7 +1,7 @@
 {
   "name": "canvas-design",
-  "description": "Museum-quality visual art generation — covers, posters, social media posts in 20+ formats with 80+ fonts, procedural noise/textures, advanced blending, curated palettes, and composition frameworks.",
-  "version": "2.0.0",
+  "description": "Production-grade visual design with HTML/CSS + Playwright rendering. 8 skills, 5 agents, 8 commands. Covers, posters, social media, thumbnails, brand assets, abstract art. 80+ fonts, 20 palettes, Apple/Linear/Vercel quality.",
+  "version": "3.0.0",
   "author": {
     "name": "Jay Pokharna"
   },
@@ -12,10 +12,14 @@
     "canvas",
     "poster",
     "cover",
-    "png",
-    "pdf",
+    "social-media",
+    "thumbnail",
+    "brand",
+    "html",
+    "css",
+    "playwright",
     "typography",
     "visual",
-    "illustration"
+    "generative"
   ]
 }

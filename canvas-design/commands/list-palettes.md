@@ -1,0 +1,6 @@
+---
+description: "List all available color palettes with hex values and moods"
+disable-model-invocation: true
+---
+
+Read the color-palettes.md reference from the canvas-design:canvas-design skill's references directory and display all 20 palettes with their names, moods, and hex color values.

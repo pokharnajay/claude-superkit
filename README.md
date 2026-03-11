@@ -8,7 +8,7 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 |--------|-------------|--------|--------|----------|
 | [airtable-super-creator](airtable-super-creator/) | Complete Airtable development toolkit — manage bases, tables, fields, records, views, webhooks, and more via the Airtable Web API | 16 | 8 | 10 |
 | [vapi-super-creator](vapi-super-creator/) | Complete voice AI toolkit for Vapi — build assistants, tools, squads, workflows, phone numbers, and webhooks | 18 | 5 | 7 |
-| [canvas-design](canvas-design/) | Museum-quality visual art — 20+ formats, 80+ fonts, procedural noise/textures, curated palettes, composition frameworks | 1 | — | — |
+| [canvas-design](canvas-design/) | Production-grade visual design with HTML/CSS + Playwright — covers, posters, social media, thumbnails, brand assets, abstract art | 8 | 5 | 8 |
 
 ## Installation
 

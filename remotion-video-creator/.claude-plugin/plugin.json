@@ -1,0 +1,15 @@
+{
+  "name": "remotion-video-creator",
+  "description": "Professional video creation with Remotion (React). 9 sub-skills, 6 agents, 7 commands. Social media (TikTok/Reels/Shorts), explainers, kinetic typography, data visualization, slideshows, audiograms, intros/outros, news highlights. Full concept-to-MP4 pipeline with 50 font pairings, 25+ palettes, motion design library.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jay Pokharna"
+  },
+  "license": "MIT",
+  "keywords": [
+    "remotion", "video", "animation", "motion-graphics", "react", "typescript",
+    "tiktok", "reels", "shorts", "youtube", "social-media",
+    "kinetic-typography", "data-visualization", "explainer",
+    "audiogram", "slideshow", "intro", "outro", "news"
+  ]
+}

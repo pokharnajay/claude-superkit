@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# SessionStart hook for remotion-video-creator plugin
+# Injects Remotion Video Creator skill awareness into every conversation
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
+PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+escape_for_json() {
+    local s="$1"
+    s="${s//\\/\\\\}"
+    s="${s//\"/\\\"}"
+    s="${s//$'\n'/\\n}"
+    s="${s//$'\r'/\\r}"
+    s="${s//$'\t'/\\t}"
+    printf '%s' "$s"
+}
+
+session_context="<REMOTION_VIDEO_CREATOR_CONTEXT>\nYou have Remotion Video Creator skills available for generating professional videos.\n\n**Rendering Pipeline:** React/TypeScript components → Remotion → MP4/WebM/GIF\n\n**Available Skills** (9 skills, invoke via Skill tool with 'remotion-video-creator:' prefix):\n\n| Skill | Purpose |\n|-------|---------|\n| social-media-video | TikTok, Instagram Reels, YouTube Shorts, Stories |\n| explainer-video | Product demos, tutorials, feature walkthroughs |\n| data-viz-video | Charts, dashboards, data stories, number animations |\n| kinetic-typography | Text-driven motion graphics, lyric videos |\n| slideshow-video | Photo montages, presentations, Ken Burns |\n| audiogram-video | Podcast visualizations, waveforms, speaker cards |\n| intro-outro | Logo animations, channel intros, subscribe CTAs |\n| news-highlight | Breaking news banners, headline animations, tickers |\n| render-engine | Project scaffolding, CLI/API rendering, multi-format output |\n\n**Agents** (1 orchestrator + 5 specialists):\n- video-director: Main orchestrator — routes to skills and specialist agents\n- motion-designer: Animation, easing, timing, stagger patterns\n- scene-architect: Scene planning, duration, transitions, pacing\n- audio-engineer: Music, SFX, voiceover, captions, audio sync\n- render-engineer: Rendering pipeline, codecs, optimization\n- typography-director: Font selection, text animation, readability\n\n**Quick Commands:** /quick-social, /quick-explainer, /quick-kinetic, /quick-render, /list-templates, /list-fonts, /list-effects\n\n**Resources:** 1500+ Google Fonts · 50 curated font pairings · 25+ video palettes · Full easing library · Transition catalog · SFX library · 8 TSX template components\n\n**Workflow:** CONCEPT → STORYBOARD → CODE → RENDER\n\n**REQUIRED:** Always invoke the relevant skill via the Skill tool. Never guess Remotion patterns from memory.\n</REMOTION_VIDEO_CREATOR_CONTEXT>"
+
+cat <<EOF
+{
+  "additional_context": "${session_context}",
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "${session_context}"
+  }
+}
+EOF
+
+exit 0

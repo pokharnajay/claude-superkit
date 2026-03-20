@@ -13,6 +13,14 @@ Create cinematic, professional videos programmatically with React and Remotion. 
 
 > **QUALITY STANDARD:** All videos MUST use the cinematic design system (read `references/cinematic-design-system.md`). This means: layered CinematicBg backgrounds (grid + orbs + particles + vignette), spring-based KineticText, GlassCard containers, per-scene accent colors, and staggered entrances. NO static image slides. NO flat backgrounds. NO CSS transitions. Every element is code-generated from scratch.
 
+## Static Graphics (via canvas-super-creator)
+
+When you need a static graphic for your video (thumbnail, title card, social preview):
+- Invoke `canvas-super-creator:thumbnail-design` for YouTube thumbnails
+- Invoke `canvas-super-creator:social-media-design` for matching social cards
+- Invoke `canvas-super-creator:html-design` for custom static frames at any resolution
+- Use the **same palette and typography** as the video for visual consistency
+
 ## When to Use
 
 Use this skill when:

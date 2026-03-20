@@ -1,0 +1,31 @@
+{
+  "name": "canvas-super-creator",
+  "description": "World-class graphic design with HTML/CSS + Playwright rendering. 12 skills, 7 agents, 12 commands. Covers, posters, social media, thumbnails, brand assets, billboards, magazines, ad campaigns, carousels, abstract art. 120+ fonts, 25 palettes, advanced CSS/SVG techniques.",
+  "version": "4.0.0",
+  "author": {
+    "name": "Jay Pokharna"
+  },
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "art",
+    "canvas",
+    "poster",
+    "cover",
+    "social-media",
+    "thumbnail",
+    "brand",
+    "billboard",
+    "magazine",
+    "editorial",
+    "carousel",
+    "ad-campaign",
+    "html",
+    "css",
+    "svg",
+    "playwright",
+    "typography",
+    "visual",
+    "generative"
+  ]
+}

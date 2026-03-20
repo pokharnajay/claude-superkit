@@ -26,12 +26,16 @@ User's request
 │   └─ .html artifact for claude.ai ──────────── web-artifacts-builder
 │
 ├─ Visual DESIGN output? (.png, .pdf, poster, art) ──────────┐
-│   ├─ Poster, cover, social graphic, brand ──── canvas-design│
+│   ├─ Poster, cover, social graphic, brand ──── canvas-super-creator
+│   ├─ Billboard, outdoor ad, transit ad ─────── canvas-super-creator
+│   ├─ Magazine cover, editorial spread ──────── canvas-super-creator
+│   ├─ Ad banner, display ad, campaign ───────── canvas-super-creator
+│   ├─ Carousel, multi-slide set ─────────────── canvas-super-creator
 │   ├─ Algorithmic/generative art (p5.js) ────── algorithmic-art
 │   └─ Animated GIF for Slack ────────────────── slack-gif-creator
 │
 ├─ VIDEO / ANIMATION? ───────────────────────────────────────┐
-│   └─ Any video, motion graphics, Remotion ──── remotion-video-creator
+│   └─ Any video, motion graphics, Remotion ──── remotion-super-creator
 │       (routes internally to: social-media-video, slideshow,│
 │        audiogram, data-viz, kinetic-typography, explainer, │
 │        intro-outro, render-engine)                         │
@@ -142,15 +146,15 @@ These are the most common confusion points. Use this when multiple skills seem t
 
 | User wants... | Use this | NOT this |
 |---|---|---|
-| A poster, cover art, social media graphic as .png/.pdf | `canvas-design` | `frontend-design` |
-| A web page, React component, dashboard | `frontend-design` | `canvas-design` |
+| A poster, cover art, social media graphic as .png/.pdf | `canvas-super-creator` | `frontend-design` |
+| A web page, React component, dashboard | `frontend-design` | `canvas-super-creator` |
 | Design system guidance (palettes, fonts, spacing) | `ui-ux-pro-max` | `ui-design` |
 | Simple UI guidelines for a page | `ui-design` | `ui-ux-pro-max` |
 | Apply colors/fonts theme to an existing artifact | `theme-factory` | `ui-ux-pro-max` |
-| Generative art with p5.js | `algorithmic-art` | `canvas-design` |
+| Generative art with p5.js | `algorithmic-art` | `canvas-super-creator` |
 | Anthropic brand look-and-feel | `brand-guidelines` | `theme-factory` |
 
-**Rule of thumb:** `canvas-design` = static image output. `frontend-design` = interactive web code. `ui-ux-pro-max` = design intelligence/system. `theme-factory` = re-skin existing work.
+**Rule of thumb:** `canvas-super-creator` = static image output. `frontend-design` = interactive web code. `ui-ux-pro-max` = design intelligence/system. `theme-factory` = re-skin existing work.
 
 ### SEO Overlap
 
@@ -175,22 +179,22 @@ These are the most common confusion points. Use this when multiple skills seem t
 
 | User wants... | Use this | NOT this |
 |---|---|---|
-| A .pdf file (create, merge, split, fill) | `pdf` | `canvas-design` |
+| A .pdf file (create, merge, split, fill) | `pdf` | `canvas-super-creator` |
 | A .docx Word document | `docx` | `pdf` |
 | A .pptx presentation | `pptx` | `docx` |
 | A .xlsx/.csv spreadsheet | `xlsx` | — |
-| A visual design exported as .pdf | `canvas-design` | `pdf` |
+| A visual design exported as .pdf | `canvas-super-creator` | `pdf` |
 | Co-author a spec/proposal (any format) | `doc-coauthoring` | `docx` |
 
-**Rule of thumb:** Match the **file extension** first. If the output is a visual design that happens to be .pdf, use `canvas-design`.
+**Rule of thumb:** Match the **file extension** first. If the output is a visual design that happens to be .pdf, use `canvas-super-creator`.
 
 ### Video vs Animation vs GIF
 
 | User wants... | Use this |
 |---|---|
-| Any video (MP4), motion graphics, Remotion | `remotion-video-creator` |
+| Any video (MP4), motion graphics, Remotion | `remotion-super-creator` |
 | Animated GIF specifically for Slack | `slack-gif-creator` |
-| Static image with no animation | `canvas-design` |
+| Static image with no animation | `canvas-super-creator` |
 
 ### Development Workflow — When to Use Which Superpower
 
@@ -227,13 +231,17 @@ When scanning the user's message, match these keywords to skills:
 `docx` `word doc` `report` `memo` `letter` → **docx**
 
 ### Visual
-`poster` `cover` `social graphic` `banner` `flyer` `infographic` → **canvas-design**
+`poster` `cover` `social graphic` `banner` `flyer` `infographic` → **canvas-super-creator**
+`billboard` `outdoor ad` `bus shelter` `transit ad` `highway sign` → **canvas-super-creator** (billboard-design)
+`magazine` `editorial` `spread` `magazine cover` `masthead` → **canvas-super-creator** (magazine-design)
+`ad banner` `display ad` `IAB` `leaderboard` `skyscraper` `retargeting` `ad campaign` → **canvas-super-creator** (ad-campaign-design)
+`carousel` `multi-slide` `swipeable` `instagram carousel` `linkedin carousel` → **canvas-super-creator** (carousel-design)
 `generative art` `p5.js` `flow field` `particles` → **algorithmic-art**
 `gif` `slack gif` `animated gif` → **slack-gif-creator**
 
 ### Video
-`video` `animation` `motion` `remotion` `tiktok` `reels` `shorts` `mp4` `render video` → **remotion-video-creator**
-`explainer` `kinetic typography` `audiogram` `data viz video` `slideshow video` → **remotion-video-creator**
+`video` `animation` `motion` `remotion` `tiktok` `reels` `shorts` `mp4` `render video` → **remotion-super-creator**
+`explainer` `kinetic typography` `audiogram` `data viz video` `slideshow video` → **remotion-super-creator**
 
 ### Web/UI
 `landing page` `dashboard` `website` `react component` `web page` `frontend` `html page` → **frontend-design**
@@ -296,7 +304,7 @@ Some tasks require invoking skills in order:
 
 1. **"Build a feature"** → `superpowers:brainstorming` → `superpowers:writing-plans` → `superpowers:test-driven-development` → `superpowers:verification-before-completion`
 
-2. **"Create a video"** → `superpowers:brainstorming` → `remotion-video-creator` (which routes to sub-skill internally)
+2. **"Create a video"** → `superpowers:brainstorming` → `remotion-super-creator` (which routes to sub-skill internally)
 
 3. **"Design a landing page"** → `superpowers:brainstorming` → `frontend-design` (may also use `ui-ux-pro-max` for design system decisions)
 
@@ -305,6 +313,12 @@ Some tasks require invoking skills in order:
 5. **"Build a Vapi voice agent from scratch"** → `vapi-super-creator:setup-api-key` → `vapi-super-creator:create-assistant` → `vapi-super-creator:create-tool` → `vapi-super-creator:setup-webhook`
 
 6. **"Build an Airtable CRM"** → `airtable-super-creator:setup-api-key` → `airtable-super-creator:bases` → `airtable-super-creator:tables` → `airtable-super-creator:fields` → `airtable-super-creator:records`
+
+7. **"Create a video with matching thumbnail and social cards"** → `remotion-super-creator` (for video) → `canvas-super-creator:thumbnail-design` (for thumbnail) → `canvas-super-creator:social-media-design` (for social cards)
+
+8. **"Design an ad campaign"** → `canvas-super-creator:ad-campaign-design` (defines visual system, then generates all IAB sizes)
+
+9. **"Create an Instagram carousel"** → `canvas-super-creator:carousel-design` (creative-director writes storyline → strategic-planner defines visual system → design slides)
 
 ---
 

@@ -21,9 +21,9 @@
       "strict": false
     },
     {
-      "name": "canvas-design",
-      "description": "Production-grade visual design with HTML/CSS + Playwright — 8 skills, 5 agents, 8 commands for covers, posters, social media, thumbnails, brand assets, and abstract art",
-      "source": "./canvas-design",
+      "name": "canvas-super-creator",
+      "description": "World-class graphic design — 12 skills, 7 agents, 12 commands. Covers, posters, social, thumbnails, brand, billboards, magazines, ad campaigns, carousels, abstract art. 120+ fonts, advanced CSS/SVG techniques.",
+      "source": "./canvas-super-creator",
       "strict": false
     },
     {

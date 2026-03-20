@@ -27,9 +27,9 @@
       "strict": false
     },
     {
-      "name": "remotion-video-creator",
+      "name": "remotion-super-creator",
       "description": "Professional video creation with Remotion (React/TypeScript) — 9 skills, 6 agents, 7 commands for social media, explainers, kinetic typography, data viz, slideshows, audiograms, intros/outros, and news highlights",
-      "source": "./remotion-video-creator",
+      "source": "./remotion-super-creator",
       "strict": false
     }
   ]

@@ -11,7 +11,7 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 | [airtable-super-creator](airtable-super-creator/) | Complete Airtable development toolkit — manage bases, tables, fields, records, views, webhooks, and more via the Airtable Web API | 16 | 8 | 10 |
 | [vapi-super-creator](vapi-super-creator/) | Complete voice AI toolkit for Vapi — build assistants, tools, squads, workflows, phone numbers, and webhooks | 18 | 5 | 7 |
 | [canvas-design](canvas-design/) | Production-grade visual design with HTML/CSS + Playwright — covers, posters, social media, thumbnails, brand assets, abstract art | 8 | 5 | 8 |
-| [remotion-video-creator](remotion-video-creator/) | Professional video creation with Remotion (React/TypeScript) — social media, explainers, kinetic typography, data viz, slideshows, audiograms, intros/outros, news highlights | 9 | 6 | 7 |
+| [remotion-super-creator](remotion-super-creator/) | Professional video creation with Remotion (React/TypeScript) — social media, explainers, kinetic typography, data viz, slideshows, audiograms, intros/outros, news highlights | 9 | 6 | 7 |
 
 > **Included in every bundle:** `find-skills` — internal routing intelligence that helps Claude discover, disambiguate, and select the right skill across all installed SuperKit bundles. No separate install needed.
 
@@ -57,7 +57,7 @@ export VAPI_API_KEY="your-vapi-private-key"
 # 80+ bundled fonts are included — no font installation required.
 ```
 
-### remotion-video-creator
+### remotion-super-creator
 
 **Prerequisite:** Node.js 18+ and a Remotion project
 
@@ -91,22 +91,22 @@ claude plugin marketplace add pokharnajay/claude-superkit
 claude plugin install airtable-super-creator@claude-superkit
 claude plugin install vapi-super-creator@claude-superkit
 claude plugin install canvas-design@claude-superkit
-claude plugin install remotion-video-creator@claude-superkit
+claude plugin install remotion-super-creator@claude-superkit
 
 
 # Install for the current project only (shared via git)
 claude plugin install airtable-super-creator@claude-superkit --scope project
 claude plugin install vapi-super-creator@claude-superkit --scope project
 claude plugin install canvas-design@claude-superkit --scope project
-claude plugin install remotion-video-creator@claude-superkit --scope project
-claude plugin install find-skills@claude-superkit --scope project
+claude plugin install remotion-super-creator@claude-superkit --scope project
+
 
 # Install locally (not shared with team)
 claude plugin install airtable-super-creator@claude-superkit --scope local
 claude plugin install vapi-super-creator@claude-superkit --scope local
 claude plugin install canvas-design@claude-superkit --scope local
-claude plugin install remotion-video-creator@claude-superkit --scope local
-claude plugin install find-skills@claude-superkit --scope local
+claude plugin install remotion-super-creator@claude-superkit --scope local
+
 ```
 
 ### Installation Scopes
@@ -216,7 +216,7 @@ claude-superkit/
 │   ├── agents/                   # 5 agents
 │   ├── commands/                 # 8 commands
 │   └── hooks/
-├── remotion-video-creator/       # Video creation plugin
+├── remotion-super-creator/       # Video creation plugin
 │   ├── .claude-plugin/
 │   ├── skills/                   # 9 sub-skills
 │   ├── agents/                   # 6 agents

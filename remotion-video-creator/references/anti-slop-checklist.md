@@ -1,6 +1,23 @@
 # Anti-Slop Checklist — Video Quality Gates
 
 > Fill the spec template before writing code. Run the audit before delivering. No exceptions.
+> **REQUIRED:** Read `references/cinematic-design-system.md` before starting any video.
+
+---
+
+## Cinematic Quality Gate (CHECK FIRST)
+
+Before ANY other checks, verify these non-negotiable standards:
+- [ ] **CinematicBg** used in every scene (grid + orbs + particles + vignette)
+- [ ] Background params **VARY per scene** (seed, accentColor, gridOpacity, orbCount, particleCount, gridAngle)
+- [ ] **KineticText** used for all text reveals (wordByWord mode with emphasis words)
+- [ ] **Spring physics** used for all entrances (not linear interpolation)
+- [ ] **Per-scene accent colors** match emotional tone (copper, blue, green, purple, teal)
+- [ ] **GlassCard** used for grouped content (not flat rectangles)
+- [ ] **AccentLine** used as scene break motif
+- [ ] **NO static image slides** — all graphics generated from code
+- [ ] **Staggered entrances** for grouped elements (cards, stats, words)
+- [ ] Colors use warm off-white (#F5F0EB) and near-black (#08080D), NOT pure black/white
 
 ---
 

@@ -8,6 +8,8 @@ __pycache__/
 # Claude Code
 .claude/
 .mcp.json
+.agents/
+skills-lock.json
 
 # Non-bundle folders
 assistants/
@@ -15,4 +17,4 @@ docs/
 claude-skills-other/
 storage/
 cover-assets/
-psots/
+posts/

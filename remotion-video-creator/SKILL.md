@@ -4,12 +4,14 @@ description: Create professional videos with Remotion (React/TypeScript). Use th
 license: MIT
 metadata:
   author: Jay Pokharna
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # Remotion Video Creator
 
-Create professional videos programmatically with React and Remotion. Every video is a React component — each frame is a render.
+Create cinematic, professional videos programmatically with React and Remotion. Every video is a React component — each frame is a render.
+
+> **QUALITY STANDARD:** All videos MUST use the cinematic design system (read `references/cinematic-design-system.md`). This means: layered CinematicBg backgrounds (grid + orbs + particles + vignette), spring-based KineticText, GlassCard containers, per-scene accent colors, and staggered entrances. NO static image slides. NO flat backgrounds. NO CSS transitions. Every element is code-generated from scratch.
 
 ## When to Use
 
@@ -104,6 +106,7 @@ npx remotion render src/index.ts CompositionId out/video.mp4 --props='{"title":"
 ## Reference Files
 
 Load these as needed:
+- **`references/cinematic-design-system.md`** — **MUST READ FIRST** — Professional quality standard, design tokens, background system, animation standards, typography rules
 - `references/remotion-api-reference.md` — Complete API cheatsheet for all Remotion packages
 - `references/format-specs.md` — Platform dimensions, FPS, duration limits
 - `references/font-pairings.md` — 50 curated video font pairings by mood
@@ -117,8 +120,21 @@ Load these as needed:
 
 ## Template Components
 
-Reusable TSX components in `templates/components/`:
-- `animated-text.tsx` — Word/character reveal animations
+### Pro Components (Tier 1 — use in EVERY video)
+- **`cinematic-bg.tsx`** — Layered background: grid + gradient orbs + particles + vignette. MUST vary params per scene (seed, accentColor, gridOpacity, orbCount, particleCount, gridAngle, gridSize)
+- **`kinetic-text.tsx`** — Word-by-word spring reveals with emphasis coloring. Modes: wordByWord, fadeUp, lineReveal
+- **`accent-line.tsx`** — Animated horizontal accent line for scene breaks and emphasis
+
+### Pro Components (Tier 2 — use when applicable)
+- **`glass-card.tsx`** — Glassmorphism containers with blur, glow, spring entrance
+- **`stat-counter.tsx`** — Animated counting numbers with spring physics
+- **`code-editor.tsx`** — VS Code-style editor mockup with typing animation, error/success states
+
+### Pro Components (Tier 3 — specialized)
+- **`waveform-bars.tsx`** — Noise-driven audio waveform visualization
+
+### Utility Components
+- `animated-text.tsx` — Basic word/character reveal animations
 - `progress-bar.tsx` — Animated progress indicator
 - `particle-system.tsx` — CSS particle effects with noise
 - `gradient-background.tsx` — Animated gradient backgrounds

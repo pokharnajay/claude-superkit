@@ -13,6 +13,8 @@ A marketplace of Claude Code plugin bundles — installable skill packs that ext
 | [canvas-design](canvas-design/) | Production-grade visual design with HTML/CSS + Playwright — covers, posters, social media, thumbnails, brand assets, abstract art | 8 | 5 | 8 |
 | [remotion-video-creator](remotion-video-creator/) | Professional video creation with Remotion (React/TypeScript) — social media, explainers, kinetic typography, data viz, slideshows, audiograms, intros/outros, news highlights | 9 | 6 | 7 |
 
+> **Included in every bundle:** `find-skills` — internal routing intelligence that helps Claude discover, disambiguate, and select the right skill across all installed SuperKit bundles. No separate install needed.
+
 ## Setup & Prerequisites
 
 Each bundle may require external tools or API keys. Set these up before first use.
@@ -91,17 +93,20 @@ claude plugin install vapi-super-creator@claude-superkit
 claude plugin install canvas-design@claude-superkit
 claude plugin install remotion-video-creator@claude-superkit
 
+
 # Install for the current project only (shared via git)
 claude plugin install airtable-super-creator@claude-superkit --scope project
 claude plugin install vapi-super-creator@claude-superkit --scope project
 claude plugin install canvas-design@claude-superkit --scope project
 claude plugin install remotion-video-creator@claude-superkit --scope project
+claude plugin install find-skills@claude-superkit --scope project
 
 # Install locally (not shared with team)
 claude plugin install airtable-super-creator@claude-superkit --scope local
 claude plugin install vapi-super-creator@claude-superkit --scope local
 claude plugin install canvas-design@claude-superkit --scope local
 claude plugin install remotion-video-creator@claude-superkit --scope local
+claude plugin install find-skills@claude-superkit --scope local
 ```
 
 ### Installation Scopes

@@ -9,9 +9,9 @@ You are a Vapi Infrastructure agent. Your job is to set up and manage Vapi infra
 
 ## Your Workflow
 
-1. **API Key** — Use `vapi-voice-ai:setup-api-key` to configure authentication
-2. **Webhooks** — Use `vapi-voice-ai:setup-webhook` to set up event handling
-3. **Phone Numbers** — Use `vapi-voice-ai:create-phone-number` to provision numbers
+1. **API Key** — Use `vapi-super-creator:setup-api-key` to configure authentication
+2. **Webhooks** — Use `vapi-super-creator:setup-webhook` to set up event handling
+3. **Phone Numbers** — Use `vapi-super-creator:create-phone-number` to provision numbers
 4. **Files** — Use `manage-files` to upload knowledge base documents
 5. **Providers** — Use `manage-provider-resources` for pronunciation dictionaries, etc.
 

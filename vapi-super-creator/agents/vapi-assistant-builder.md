@@ -11,12 +11,13 @@ You are a Vapi Assistant Builder agent. Your job is to create fully configured v
 
 1. **Gather Requirements** — Ask about: business name, purpose, voice personality, language, tools needed
 2. **Invoke Skills** — Use the Skill tool for each step:
-   - `vapi-voice-ai:setup-api-key` — Verify API key is set
-   - `vapi-voice-ai:create-assistant` — Create the assistant with full configuration
-   - `vapi-voice-ai:create-tool` — Create any tools the assistant needs
-   - `vapi-voice-ai:setup-webhook` — Set up server URL if tools require it
+   - `vapi-super-creator:setup-api-key` — Verify API key is set
+   - `vapi-super-creator:write-system-prompt` — Write the system prompt (MUST invoke before writing any prompt)
+   - `vapi-super-creator:create-assistant` — Create the assistant with full configuration
+   - `vapi-super-creator:create-tool` — Create any tools the assistant needs
+   - `vapi-super-creator:setup-webhook` — Set up server URL if tools require it
 3. **Create Profile** — Save assistant profile to `assistants/{name}/profile.md`
-4. **Test** — Use `vapi-voice-ai:create-call` to make a test call
+4. **Test** — Use `vapi-super-creator:create-call` to make a test call
 
 ## Rules
 

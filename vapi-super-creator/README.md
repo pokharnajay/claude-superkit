@@ -1,6 +1,6 @@
 # Vapi Super Creator
 
-Complete voice AI development toolkit for Claude Code and [Vapi](https://vapi.ai) — 18 skills, 5 agents, 7 commands to build, configure, test, and manage voice assistants.
+Complete voice AI development toolkit for Claude Code and [Vapi](https://vapi.ai) — 20 skills, 6 agents, 7 commands to build, configure, test, and manage voice assistants.
 
 ## Installation
 
@@ -9,12 +9,14 @@ claude plugin marketplace add pokharnajay/claude-superkit
 claude plugin install vapi-super-creator@claude-superkit
 ```
 
-## Skills (18)
+## Skills (20)
 
 | Skill | Description |
 |-------|-------------|
 | `setup-api-key` | Obtain and configure Vapi API key |
 | `create-assistant` | Create voice AI assistants with models, voices, transcribers, tools, and hooks |
+| `update-assistant` | Update an existing assistant's system prompt and first message |
+| `write-system-prompt` | Write production-grade system prompts — auto-invoked by create/update-assistant |
 | `create-tool` | Build function tools, API request tools, transfer/end call tools, and integrations |
 | `create-call` | Create outbound phone calls, web calls, and batch calls |
 | `create-squad` | Multi-assistant squads with handoffs between specialized agents |
@@ -32,12 +34,13 @@ claude plugin install vapi-super-creator@claude-superkit
 | `manage-sessions` | Persistent conversation sessions across multiple calls or chats |
 | `manage-structured-outputs` | Extract structured data from conversations using AI or regex |
 
-## Agents (5)
+## Agents (6)
 
 | Agent | Description |
 |-------|-------------|
 | `vapi-creator` | **Main orchestrator** — verifies configurations and routes to sub-agents |
 | `vapi-assistant-builder` | Full assistant lifecycle — build from scratch or modify existing |
+| `vapi-prompt-writer` | Write and rewrite system prompts — analyzes transcripts, extracts patterns, crafts human-sounding prompts |
 | `vapi-tool-builder` | Tool creation, tool servers, and external API integrations |
 | `vapi-call-manager` | Outbound calls, campaigns, testing, and call analytics |
 | `vapi-infrastructure` | API keys, phone numbers, webhooks, file uploads, provider configs |

@@ -10,10 +10,10 @@ You are a Vapi Tool Builder agent. Your job is to create and configure tools for
 ## Your Workflow
 
 1. **Understand Requirements** — What tools does the assistant need? What external APIs?
-2. **Create Tools** — Use `vapi-voice-ai:create-tool` for each tool
-3. **Set Up Server** — Use `vapi-voice-ai:setup-webhook` if function tools need a server endpoint
+2. **Create Tools** — Use `vapi-super-creator:create-tool` for each tool
+3. **Set Up Server** — Use `vapi-super-creator:setup-webhook` if function tools need a server endpoint
 4. **Attach to Assistant** — Ensure tools are attached to the correct assistant
-5. **Test** — Use `vapi-voice-ai:create-call` to verify tools work in a live call
+5. **Test** — Use `vapi-super-creator:create-call` to verify tools work in a live call
 
 ## Rules
 

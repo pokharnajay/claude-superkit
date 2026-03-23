@@ -224,51 +224,57 @@ export const calculateMetadata: CalculateMetadataFunction<Props> = async ({ prop
 
 ## AI Voiceover Integration
 
-### ElevenLabs Text-to-Speech
+### edge-tts — DEFAULT (Free, No API Key)
 
-```typescript
-import fs from 'fs';
+Microsoft Edge neural voices. Zero cost, 300+ voices, neural quality. Install once: `pip install edge-tts`
 
-async function generateVoiceover(text: string, outputPath: string) {
-  const VOICE_ID = 'pNInz6obpgDQGcFmaJgB'; // Adam — change to your preferred voice
-  const API_KEY = process.env.ELEVEN_LABS_API_KEY;
-
-  const response = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
-    {
-      method: 'POST',
-      headers: {
-        'xi-api-key': API_KEY!,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text,
-        model_id: 'eleven_multilingual_v2',
-        voice_settings: {
-          stability: 0.5,
-          similarity_boost: 0.75,
-          style: 0.3,
-          use_speaker_boost: true,
-        },
-      }),
-    }
-  );
-
-  if (!response.ok) throw new Error(`ElevenLabs API error: ${response.status}`);
-
-  const audioBuffer = await response.arrayBuffer();
-  fs.writeFileSync(outputPath, Buffer.from(audioBuffer));
-  console.log(`Voiceover saved to ${outputPath}`);
-}
-
-// Usage:
-await generateVoiceover(
-  'Welcome to our product demo. Today we will walk through the new features.',
-  'public/voiceover.mp3'
-);
+**CLI (simplest):**
+```bash
+edge-tts --voice en-US-JennyNeural --text "Your narration here." --write-media public/voiceover.mp3
 ```
 
-### OpenAI TTS
+**Python script (for multi-segment voiceover):**
+```python
+# scripts/generate-voiceover.py
+import edge_tts
+import asyncio
+
+VOICE = "en-US-JennyNeural"  # or en-US-GuyNeural, en-GB-SoniaNeural, en-US-AriaNeural
+
+async def generate(text: str, output: str = "public/voiceover.mp3"):
+    await edge_tts.Communicate(text, voice=VOICE).save(output)
+    print(f"Saved: {output}")
+
+asyncio.run(generate("Welcome to our product demo. Today we will walk you through the new features."))
+```
+
+**Run before render:**
+```bash
+python scripts/generate-voiceover.py && npx remotion render src/index.ts MyVideo out/video.mp4
+```
+
+**Voice quick-reference:**
+
+| Voice | Style |
+|---|---|
+| `en-US-JennyNeural` | Friendly female (default) |
+| `en-US-GuyNeural` | Neutral male |
+| `en-US-AriaNeural` | Expressive female |
+| `en-US-DavisNeural` | Casual male |
+| `en-GB-SoniaNeural` | British female |
+| `en-GB-RyanNeural` | British male |
+| `en-AU-NatashaNeural` | Australian female |
+
+List all voices: `edge-tts --list-voices`
+
+**Use in Remotion:**
+```tsx
+<Audio src={staticFile('voiceover.mp3')} volume={0.9} />
+```
+
+---
+
+### OpenAI TTS (Paid, High Quality)
 
 ```typescript
 import OpenAI from 'openai';
@@ -287,6 +293,33 @@ async function generateVoiceover(text: string, outputPath: string) {
 
   const buffer = Buffer.from(await response.arrayBuffer());
   fs.writeFileSync(outputPath, buffer);
+}
+```
+
+### ElevenLabs (Paid, Premium Quality)
+
+```typescript
+import fs from 'fs';
+
+async function generateVoiceover(text: string, outputPath: string) {
+  const VOICE_ID = 'pNInz6obpgDQGcFmaJgB'; // Adam — change to your preferred voice
+  const API_KEY = process.env.ELEVEN_LABS_API_KEY;
+
+  const response = await fetch(
+    `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
+    {
+      method: 'POST',
+      headers: { 'xi-api-key': API_KEY!, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        text,
+        model_id: 'eleven_multilingual_v2',
+        voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0.3, use_speaker_boost: true },
+      }),
+    }
+  );
+
+  if (!response.ok) throw new Error(`ElevenLabs API error: ${response.status}`);
+  fs.writeFileSync(outputPath, Buffer.from(await response.arrayBuffer()));
 }
 ```
 

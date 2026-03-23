@@ -26,14 +26,14 @@ Always invoke these via the Skill tool — never guess or skip:
 
 | When you need to...                  | Invoke this skill                    |
 |--------------------------------------|--------------------------------------|
-| Set up API key / environment         | `vapi-voice-ai:setup-api-key`        |
-| Create or fix an assistant           | `vapi-voice-ai:create-assistant`     |
-| Create or fix tools for an assistant | `vapi-voice-ai:create-tool`          |
-| Make outbound or test calls          | `vapi-voice-ai:create-call`          |
-| Build multi-assistant squads         | `vapi-voice-ai:create-squad`         |
-| Set up phone numbers                 | `vapi-voice-ai:create-phone-number`  |
-| Configure webhooks / server URLs     | `vapi-voice-ai:setup-webhook`        |
-| Build conversation workflows         | `vapi-voice-ai:create-workflow`      |
+| Set up API key / environment         | `vapi-super-creator:setup-api-key`        |
+| Create or fix an assistant           | `vapi-super-creator:create-assistant`     |
+| Create or fix tools for an assistant | `vapi-super-creator:create-tool`          |
+| Make outbound or test calls          | `vapi-super-creator:create-call`          |
+| Build multi-assistant squads         | `vapi-super-creator:create-squad`         |
+| Set up phone numbers                 | `vapi-super-creator:create-phone-number`  |
+| Configure webhooks / server URLs     | `vapi-super-creator:setup-webhook`        |
+| Build conversation workflows         | `vapi-super-creator:create-workflow`      |
 
 ## Verification Checklist (run after every build/fix)
 

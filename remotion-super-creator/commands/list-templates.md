@@ -1,6 +1,5 @@
 ---
 description: "List all available video templates and their descriptions."
-disable-model-invocation: true
 ---
 
 Display the available video type templates:

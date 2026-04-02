@@ -1,6 +1,5 @@
 ---
 description: "List available animation effects, transitions, and easing curves."
-disable-model-invocation: true
 ---
 
 Display available effects from three sources:

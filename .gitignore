@@ -17,4 +17,7 @@ docs/
 claude-skills-other/
 storage/
 cover-assets/
-posts/
+posts/.env
+.env
+.superpowers/
+google-cloud-setup/
